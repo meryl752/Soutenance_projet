@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmFind - Mon Profil</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #E0F2F1;
+            --accent-color: #FF5722;
+            --dark-color: #333;
+            --light-color: #f9f9f9;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        .product-details {
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+        }
+        
+        .pharmacy-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .pharmacy-list-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        
+        .pharmacy-details {
+            flex: 1;
+        }
+        
+        .pharmacy-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .map-btn {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #666;
+            text-decoration: none;
+        }
+        
+        .nav-item.active {
+            color: var(--primary-color);
+        }
+        
+        .nav-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+                a {
+            text-decoration: none;
+            padding: 12px 22px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: green;
+            cursor: pointer;
+            
+           
+}
+    </style>
+</head>
+<body>
+
+    
+    <div class="container">
+        <h1 style="margin: 30px 0 20px;">Mon Profil</h1>
+        
+        <div class="product-details">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="width: 100px; height: 100px; background-color: var(--secondary-color); border-radius: 50%; margin: 0 auto 15px; display: flex; justify-content: center; align-items: center; font-size: 36px; color: var(--primary-color);">
+                    👤
+                </div>
+                <div style="font-size: 24px; font-weight: bold;">Sophie Dupont</div>
+                <div>sophie.dupont@email.com</div>
+            </div>
+            
+            <div class="pharmacy-list">
+                <div class="pharmacy-list-item">
+                    <div class="pharmacy-details">
+                        <div style="font-weight: bold;">Informations personnelles</div>
+                    </div>
+                    <div class="pharmacy-actions">
+                        <button class="map-btn">Modifier</button>
+                    </div>
+                </div>
+                
+                <div class="pharmacy-list-item">
+                    <div class="pharmacy-details">
+                        <div style="font-weight: bold;">Ordonnances sauvegardées</div>
+                        <div>2 ordonnances actives</div>
+                    </div>
+                    <div class="pharmacy-actions">
+                        <button class="map-btn">Voir</button>
+                    </div>
+                </div>
+                
+                <div class="pharmacy-list-item">
+                    <div class="pharmacy-details">
+                        <div style="font-weight: bold;">Pharmacies favorites</div>
+                        <div>3 pharmacies</div>
+                    </div>
+                    <div class="pharmacy-actions">
+                        <button class="map-btn">Voir</button>
+                    </div>
+                </div>
+                
+                <div class="pharmacy-list-item">
+                    <div class="pharmacy-details">
+                        <div style="font-weight: bold;">Produits suivis</div>
+                        <div>5 produits</div>
+                    </div>
+                    <div class="pharmacy-actions">
+                        <button class="map-btn">Voir</button>
+                    </div>
+                </div>
+                
+                <div class="pharmacy-list-item">
+                    <div class="pharmacy-details">
+                        <div style="font-weight: bold;">Historique de recherche</div>
+                    </div>
+                    <div class="pharmacy-actions">
+                        <button class="map-btn">Voir</button>
+                    </div>
+                </div>
+                
+                <div class="pharmacy-list-item">
+                    <div class="pharmacy-details">
+                        <div style="font-weight: bold;">Paramètres</div>
+                        <div>Notifications, confidentialité, etc.</div>
+                    </div>
+                    <div class="pharmacy-actions">
+                        <button class="map-btn">Voir</button>
+                    </div>
+                </div>
+                
+                <div class="pharmacy-list-item">
+                    <div class="pharmacy-details">
+                        <div style="font-weight: bold;">Aide et support</div>
+                        <div>FAQ, contact, signaler un problème</div>
+                    </div>
+                    <div class="pharmacy-actions">
+                        <button class="map-btn">Voir</button>
+                    </div>
+                </div>
+            </div>
+            
+            <button style="width: 100%; padding: 15px; margin-top: 20px; background-color: #f5f5f5; border: 1px solid #ddd; border-radius: 5px; color: #666; cursor: pointer;">Se déconnecter</button>
+        </div>
+    </div>
+    
+    <div class="bottom-nav">
+        <a href="#" class="nav-item">
+            <div class="nav-icon"><i class="fa-solid fa-house"></i></div>
+            <a href="{{ route('Acceuil') }}">Acceuil</a>
+        </a>
+        <a href="#" class="nav-item active">
+            <div class="nav-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+    
+        </a>
+        <a href="#" class="nav-item">
+            <div class="nav-icon"></div>
+            <a href="{{ route('reservations') }}">Reservations</a>
+        </a>
+        <a href="#" class="nav-item">
+            <div class="nav-icon"><i class="fa-solid fa-circle-user"></i></div>
+            <a href="{{ route('profil') }}">Profil</a>
+        </a>
+    </div>
+</body>
+</html>
