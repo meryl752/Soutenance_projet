@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inscription - PharmaMarket</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .register-container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 800px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2a9d8f;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 2rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      resize: none;
+    }
+
+    textarea {
+      height: 90px;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    .btn-register {
+      padding: 0.8rem;
+      background-color: #2a9d8f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      width: 100%;
+    }
+
+    .btn-register:hover {
+      background-color: #21867a;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 1rem;
+      grid-column: 1 / -1;
+    }
+
+    .links a {
+      color: #2a9d8f;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-container">
+    <h2>Créer un compte</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" placeholder="" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Adresse email</label>
+        <input type="email" id="email" placeholder="" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" placeholder="" required />
+      </div>
+
+      <div class="form-group">
+        <label for="date_of_birth">Date de naissance</label>
+        <input type="date" id="date_of_birth" required />
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Sexe</label>
+        <select id="gender" required>
+          <option value="" disabled selected>Choisissez</option>
+          <option value="male">Homme</option>
+          <option value="female">Femme</option>
+          
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Adresse</label>
+        <textarea id="address" placeholder="Ex : ab-calavi , quartier Aifa" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" required />
+      </div>
+
+      <div class="form-group">
+        <label for="confirm_password">Confirmation</label>
+        <input type="password" id="confirm_password" required />
+      </div>
+
+      <div class="form-group full-width">
+        <button type="submit" class="btn-register">S'inscrire</button>
+      </div>
+
+      <div class="links">
+        <a href="login.html">Déjà inscrit ? Connexion</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
